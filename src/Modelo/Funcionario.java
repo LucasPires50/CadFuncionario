@@ -1,8 +1,8 @@
 package Modelo;
 
-
 public class Funcionario {
-     //Com private não deixar o programador acessar todos as informção automaticamente, ele terar que aplicar o método get e set para pode aplicar essa informações
+    //Com private não deixar o programador acessar todos as informção automaticamente, ele terar que aplicar o método get e set para pode aplicar essa informações
+
     private String nome;
     private double salario;
     private int codCargo;
@@ -41,12 +41,6 @@ public class Funcionario {
 
     public void settempserviço(int tempserviço) {
         this.tempserviço = tempserviço;
-    
 
+    }
 }
-}
-
-    
-
-
-
