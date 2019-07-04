@@ -1,7 +1,7 @@
 package Modelo;
 
 public class Funcionario {
-    //Com private não deixar o programador acessar todos as informção automaticamente, ele terar que aplicar o método get e set para pode aplicar essa informações
+    //Com private não deixar o programador acessar todos as informção automaticamente, ele terar que aplicar o método get e set para poder acessar essas informações
 
     private String nome;
     private String Sobrenome;
@@ -55,8 +55,7 @@ public class Funcionario {
     }
 
     public String getCargo() {
-        Cargo = "";
-
+        //condição para retorna o cargo na interface grafica, ultilizando o codigo de codCargo
         if (codCargo == 101) {
             Cargo = "Gerente";
         } else if (codCargo == 102) {
