@@ -4,9 +4,11 @@ public class Funcionario {
     //Com private não deixar o programador acessar todos as informção automaticamente, ele terar que aplicar o método get e set para pode aplicar essa informações
 
     private String nome;
+    private String Sobrenome;
     private double salario;
     private int codCargo;
     private int tempserviço;
+    private String Cargo;
 
     //da retorno para acessar o valor
     public String getNome() {
@@ -15,6 +17,14 @@ public class Funcionario {
 
     //não da retorno da informação, só alterar o valor da variavel.
     public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSobrenome() {
+        return this.nome;
+    }
+
+    public void setSobrenome(String nome) {
         this.nome = nome;
     }
 
@@ -42,5 +52,25 @@ public class Funcionario {
     public void settempserviço(int tempserviço) {
         this.tempserviço = tempserviço;
 
+    }
+
+    public String getCargo() {
+        Cargo = "";
+
+        if (codCargo == 101) {
+            Cargo = "Gerente";
+        } else if (codCargo == 102) {
+            Cargo = "Engenheiro";
+        } else if (codCargo == 103) {
+            Cargo = "Técnico";
+        } else {
+            Cargo = "Não está cadastrado";
+        }
+
+        return this.Cargo;
+    }
+
+    public void setCargo(String Cargo) {
+        this.Cargo = Cargo;
     }
 }

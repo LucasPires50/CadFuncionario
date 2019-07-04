@@ -10,9 +10,11 @@ public class CadFuncionarioPrincipal {
 
         //Para acessar os atributos do funcioário inderetamente pelo metodo set, pois é private.
         f.setNome("Lucas");
+        f.setSobrenome("");
         f.setSalario(2000);
         f.setCodCargo(101);
         f.settempserviço(2);
+        f.setCargo("");
         //essa classe vai receber tudo que tem na classe funcionário com o (f).
         AumentoSalarial a = new AumentoSalarial(f);
 

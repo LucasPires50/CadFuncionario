@@ -7,6 +7,12 @@ import javax.swing.JOptionPane;
 public class InterfaceCalSalario extends javax.swing.JFrame {
     public InterfaceCalSalario() {
         initComponents();
+        //para o texto (resultado ------), não aparecer na interfaçe gráfica.
+        labelResultadoNome.setText("");
+        labelResultadoSobrenome.setText("");
+        labelResultadoNovosalario.setText("");
+        labelResultadoDiferença.setText("");
+        labelResultadoCargo.setText("");
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -23,25 +29,50 @@ public class InterfaceCalSalario extends javax.swing.JFrame {
         cpTempoServico = new javax.swing.JTextField();
         btnCalcular = new javax.swing.JButton();
         labelNovoSalario = new javax.swing.JLabel();
-        labelResultadoSalario = new javax.swing.JLabel();
+        labelResultadoNovosalario = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         labelDiferenca = new javax.swing.JLabel();
         labelResultadoDiferença = new javax.swing.JLabel();
+        labelSobrenome = new javax.swing.JLabel();
+        cpSobrenome = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        labelResultadoCargo = new javax.swing.JLabel();
+        labelResultadoSobrenome = new javax.swing.JLabel();
+        labelResultadoNome = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculo de Aumento Salarial");
+        setBackground(new java.awt.Color(102, 102, 102));
 
-        labelNome.setText("Informe seu nome: ");
+        labelNome.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        labelNome.setText("Nome:");
         labelNome.setName(""); // NOI18N
 
+        cpNome.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+
+        labelSalario.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelSalario.setText("Informe o Salário:");
 
+        cpSalario.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+
+        labelCodigoCargo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelCodigoCargo.setText("Informe o Código da Cargo:");
 
+        cpCodigo.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+
+        labelTempoServico.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelTempoServico.setText("Informe o Tempo de Serviço:");
 
+        cpTempoServico.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+
+        btnCalcular.setBackground(new java.awt.Color(0, 0, 0));
+        btnCalcular.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnCalcular.setForeground(new java.awt.Color(255, 0, 0));
         btnCalcular.setText("Calcular");
         btnCalcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -49,92 +80,133 @@ public class InterfaceCalSalario extends javax.swing.JFrame {
             }
         });
 
+        labelNovoSalario.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelNovoSalario.setText("Novo Salário: ");
 
-        labelResultadoSalario.setText("(resultado salário)");
+        labelResultadoNovosalario.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        labelResultadoNovosalario.setText("(resultado salário)");
 
+        labelDiferenca.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelDiferenca.setText("Diferença: ");
 
+        labelResultadoDiferença.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         labelResultadoDiferença.setText("(resultado diferença)");
+
+        labelSobrenome.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        labelSobrenome.setText("Sobrenome:");
+
+        cpSobrenome.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel1.setText("Sobrenome:");
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel3.setText("Nome:");
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel4.setText("Cargo:");
+
+        labelResultadoCargo.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        labelResultadoCargo.setText("(resultado cargo)");
+
+        labelResultadoSobrenome.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        labelResultadoSobrenome.setText("(resultado sobrenome)");
+
+        labelResultadoNome.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        labelResultadoNome.setText("(resultado nome)");
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo.jpeg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(402, 402, 402)
+                .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelSobrenome)
+                    .addComponent(labelSalario)
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelNovoSalario)
+                            .addComponent(labelDiferenca)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel3))
                         .addGap(10, 10, 10)
-                        .addComponent(labelNome))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(cpNome, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(labelSalario))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(cpSalario, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(labelCodigoCargo))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(cpCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(labelTempoServico))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(cpTempoServico, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(398, 398, 398)
-                        .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelResultadoNome)
+                            .addComponent(labelResultadoSobrenome)
+                            .addComponent(labelResultadoCargo)
+                            .addComponent(labelResultadoDiferença)
+                            .addComponent(labelResultadoNovosalario))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5))
                     .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(labelNovoSalario)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(labelResultadoSalario))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(labelDiferenca)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(labelResultadoDiferença)))
-                .addGap(1, 1, 1))
+                    .addComponent(cpSobrenome, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cpNome, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelNome)
+                    .addComponent(cpSalario, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cpCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelCodigoCargo)
+                    .addComponent(labelTempoServico)))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(cpTempoServico, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(11, 11, 11)
+                .addContainerGap()
                 .addComponent(labelNome)
-                .addGap(6, 6, 6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(cpNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
+                .addComponent(labelSobrenome)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cpSobrenome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(labelSalario)
-                .addGap(6, 6, 6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cpSalario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(labelCodigoCargo)
-                .addGap(6, 6, 6)
+                .addGap(4, 4, 4)
                 .addComponent(cpCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
                 .addComponent(labelTempoServico)
-                .addGap(6, 6, 6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cpTempoServico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
+                .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelNovoSalario)
-                    .addComponent(labelResultadoSalario))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelDiferenca)
-                    .addComponent(labelResultadoDiferença))
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(labelResultadoNome))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(labelResultadoSobrenome))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(labelResultadoCargo))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelNovoSalario)
+                            .addComponent(labelResultadoNovosalario))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelDiferenca)
+                            .addComponent(labelResultadoDiferença)))))
         );
 
         cpNome.getAccessibleContext().setAccessibleName("");
@@ -145,6 +217,7 @@ public class InterfaceCalSalario extends javax.swing.JFrame {
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
         
         String nome = cpNome.getText();
+        String sobrenome = cpSobrenome.getText();
         //converte variavel de string para para double
         double salario = Double.parseDouble(cpSalario.getText());
         int codCargo = Integer.parseInt(cpCodigo.getText());
@@ -157,8 +230,12 @@ public class InterfaceCalSalario extends javax.swing.JFrame {
         f.settempserviço(tempoServiço);
         
         AumentoSalarial s = new AumentoSalarial(f);
+        
+        labelResultadoNome.setText(""+nome);
+        labelResultadoSobrenome.setText(""+sobrenome);
+        labelResultadoCargo.setText(""+f.getCargo());
         double novoSalario = s.calcularAumento();
-        labelResultadoSalario.setText(""+novoSalario);
+        labelResultadoNovosalario.setText(""+novoSalario);
         labelResultadoDiferença.setText(""+(novoSalario - f.getSalario()));
     }//GEN-LAST:event_btnCalcularActionPerformed
     public static void main(String args[]) {
@@ -189,16 +266,25 @@ public class InterfaceCalSalario extends javax.swing.JFrame {
     private javax.swing.JTextField cpCodigo;
     private javax.swing.JTextField cpNome;
     private javax.swing.JTextField cpSalario;
+    private javax.swing.JTextField cpSobrenome;
     private javax.swing.JTextField cpTempoServico;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel labelCodigoCargo;
     private javax.swing.JLabel labelDiferenca;
     private javax.swing.JLabel labelNome;
     private javax.swing.JLabel labelNovoSalario;
+    private javax.swing.JLabel labelResultadoCargo;
     private javax.swing.JLabel labelResultadoDiferença;
-    private javax.swing.JLabel labelResultadoSalario;
+    private javax.swing.JLabel labelResultadoNome;
+    private javax.swing.JLabel labelResultadoNovosalario;
+    private javax.swing.JLabel labelResultadoSobrenome;
     private javax.swing.JLabel labelSalario;
+    private javax.swing.JLabel labelSobrenome;
     private javax.swing.JLabel labelTempoServico;
     // End of variables declaration//GEN-END:variables
 }
