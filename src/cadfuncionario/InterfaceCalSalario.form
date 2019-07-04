@@ -129,9 +129,9 @@
                           <Component id="labelResultadoNovosalario" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelDiferenca" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="labelResultadoDiferença" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelDiferenca" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>

@@ -204,9 +204,9 @@ public class InterfaceCalSalario extends javax.swing.JFrame {
                             .addComponent(labelNovoSalario)
                             .addComponent(labelResultadoNovosalario))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(labelDiferenca)
-                            .addComponent(labelResultadoDiferença)))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelResultadoDiferença)
+                            .addComponent(labelDiferenca)))))
         );
 
         cpNome.getAccessibleContext().setAccessibleName("");
@@ -229,6 +229,7 @@ public class InterfaceCalSalario extends javax.swing.JFrame {
         f.setCodCargo(codCargo);
         f.settempserviço(tempoServiço);
         
+        //Declarar aqui todo o que for calculado na classe aumento salário 
         AumentoSalarial s = new AumentoSalarial(f);
         
         labelResultadoNome.setText(""+nome);
