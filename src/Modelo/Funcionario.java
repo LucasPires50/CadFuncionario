@@ -53,7 +53,12 @@ public class Funcionario {
         this.tempserviço = tempserviço;
 
     }
-
+/**
+ *Este método defini o cargo discrítivo
+ *do funcinário
+ * 
+ * @return cargo discritivo 
+ */
     public String getCargo() {
         //condição para retorna o cargo na interface grafica, ultilizando o codigo de codCargo
         if (codCargo == 101) {
