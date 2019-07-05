@@ -9,7 +9,12 @@ public class AumentoSalarial {
     public AumentoSalarial(Funcionario func) {
         this.func = func;
     }
-
+/**
+ *Este método define o calculo do novo salário de acordo
+ * com o código do cargo
+ * 
+ * @return novo salário
+ */
     public double calcularAumento() {
         double novoSalario = 0;
         int codCargo = this.func.getCodCargo();
@@ -25,7 +30,12 @@ public class AumentoSalarial {
         }
         return novoSalario;
     }
-
+/**
+ *Este método defini o calculo do aumento saláril
+ * para o cargo gerente
+ * 
+ * @return novo salário do gerente
+ */
     private double calcGerente() {
 
         int tempo = this.func.gettempserviço();
@@ -46,7 +56,12 @@ public class AumentoSalarial {
 
         return novoSalario;
     }
-
+/**
+ *Este método defini o calculo do aumento saláril
+ * para o cargo Engenheiro
+ * 
+ * @return novo salário do Engenheiro
+ */
     private double calcEngenheiro() {
 
         int tempo = this.func.gettempserviço();
@@ -68,7 +83,12 @@ public class AumentoSalarial {
         return novoSalario;
 
     }
-
+ /**
+ *Este método defini o calculo do aumento saláril
+ * para o cargo Tecnico
+ * 
+ * @return novo salário do Tecnico
+ */   
     private double calcTecnico() {
 
         int tempo = this.func.gettempserviço();
@@ -90,6 +110,12 @@ public class AumentoSalarial {
         return novoSalario;
 
     }
+/**
+ *Este método defini o calculo do aumento saláril
+ * para o cargo não cadastrado
+ * 
+ * @return novo salário do cargo não cadastrado
+ */
 
     private double calcGeral() {
         int tempo = this.func.gettempserviço();
