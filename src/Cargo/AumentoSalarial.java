@@ -5,7 +5,12 @@ import Modelo.Funcionario;
 public class AumentoSalarial {
 
     private Funcionario func;
-
+/**
+ * Esta classe contem as regras necessárias para calcular 
+ * o aumento salarial
+ * 
+ * @param func Objeto do tipo funcionário
+ */
     public AumentoSalarial(Funcionario func) {
         this.func = func;
     }
